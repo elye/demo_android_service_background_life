@@ -9,23 +9,26 @@
 
     <Button
         android:id="@+id/btn_main"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Main Service"
+        android:text="Main Process Service"
         android:onClick="onMainButtonClick" />
 
     <Button
         android:id="@+id/btn_other"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Other Service"
+        android:text="Other Process Service"
         android:onClick="onOtherButtonClick" />
 
     <Button
         android:id="@+id/btn_sync"
+        android:layout_margin="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sync Adaptor"
+        android:text="Sync Adaptor Service"
         android:onClick="onSyncButtonClick" />
 
 </LinearLayout>
