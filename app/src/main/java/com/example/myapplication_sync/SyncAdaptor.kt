@@ -3,7 +3,6 @@ package com.example.myapplication_sync
 import android.accounts.Account
 import android.content.*
 import android.os.Bundle
-import android.util.Log
 
 /**
  * Handle the transfer of data between a server and an
@@ -40,7 +39,10 @@ class SyncAdaptor @JvmOverloads constructor(
         /*
          * Put the data transfer code here.
          */
-        printme("SyncAdapter", "onPerformSync")
-        Thread.sleep(5000)
+        printMe("SyncAdapter", "onPerformSync")
+        repeat(100) {
+            printMe("SyncAdapter", "running $it")
+            Thread.sleep(1000)
+        }
     }
 }

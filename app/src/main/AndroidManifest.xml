@@ -22,7 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name="com.example.myapplication_sync.MainService"/>
+        <service android:name="com.example.myapplication_sync.MainService" />
+        <service android:name="com.example.myapplication_sync.OtherService"
+            android:process=":otherProcess" />
 
         <service
             android:name="com.example.myapplication_sync.AuthenticatorService">

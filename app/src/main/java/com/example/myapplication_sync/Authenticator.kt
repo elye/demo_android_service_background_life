@@ -6,7 +6,6 @@ import android.accounts.AccountAuthenticatorResponse
 import android.accounts.NetworkErrorException
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 
 /*
  * Implement AbstractAccountAuthenticator and stub out all
@@ -29,7 +28,7 @@ class Authenticator(context: Context) // Simple constructor
         strings: Array<String>,
         bundle: Bundle
     ): Bundle? {
-        printme("Authenticator", "addAccount")
+        printMe("Authenticator", "addAccount")
         return null
     }
 

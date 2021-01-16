@@ -18,7 +18,7 @@ class MainApplication: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        printme("MainApplication", "onCreate")
+        printMe("MainApplication", "onCreate")
     }
 
     /**
@@ -42,14 +42,19 @@ class MainApplication: Application() {
                  * then call context.setIsSyncable(account, AUTHORITY, 1)
                  * here.
                  */
-                printme("newAccount", "addAccountExplicitly")
+                printMe("newAccount", "addAccountExplicitly")
             } else {
                 /*
                  * The account exists or some other error occurred. Log this, report it,
                  * or handle it internally.
                  */
-                printme("newAccount", "addAccountExplicitly")
+                printMe("newAccount", "addAccountExplicitly")
             }
         }
+    }
+
+    override fun onTerminate() {
+        super.onTerminate()
+        printMe("MainApplication", "onTerminate")
     }
 }

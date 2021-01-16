@@ -3,7 +3,6 @@ package com.example.myapplication_sync
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
-import android.util.Log
 
 /**
  * Define a Service that returns an [android.os.IBinder] for the
@@ -21,7 +20,7 @@ class SyncService : Service() {
          * Disallow parallel syncs
          */
         synchronized(sSyncAdapterLock) {
-            printme("SyncService", "onCreate")
+            printMe("SyncService", "onCreate")
             sSyncAdaptor = sSyncAdaptor ?: SyncAdaptor(applicationContext, true)
         }
     }
@@ -41,14 +40,14 @@ class SyncService : Service() {
          * We should never be in a position where this is called before
          * onCreate() so the exception should never be thrown
          */
-        printme("SyncService", "onBind")
+        printMe("SyncService", "onBind")
         return sSyncAdaptor?.syncAdapterBinder ?: throw IllegalStateException()
     }
 
 
     override fun onDestroy() {
+        printMe("SyncService", "onDestroy")
         super.onDestroy()
-        printme("SyncService", "onDestroy")
     }
 
     companion object {
